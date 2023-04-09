@@ -31,7 +31,10 @@ $ pip freeze > requirements.txt
 
 ## Credits
 
-Inspired by @carykh's drawer written in Processing ([repo][1] and [tutorial][2])
+Inspired by @carykh's drawer written in Processing ([repo][1] and
+[tutorial][2]). If you are a beginner, I fully recommend his tutorial as it is
+simple and easy to follow. That said, I have extended many features and made
+numerous improvements in optimisation and code hygiene.
 
 [1]: https://github.com/carykh/AbacabaTutorialDrawer
 [2]: https://www.youtube.com/playlist?list=PLsRQr3mpFF3Khoca0cXA8-_tSloCwlZK8
