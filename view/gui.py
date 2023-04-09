@@ -1,6 +1,5 @@
 import pyglet
 from pyglet import shapes
-import sys
 
 from model.data_handler import DataHandler
 from view.bar_plot import BarPlot

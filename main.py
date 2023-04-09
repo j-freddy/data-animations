@@ -1,5 +1,3 @@
-import numpy as np
-
 from model.const import FILEPATH
 from model.data_handler import DataHandler
 from view.gui import GUI
