@@ -80,9 +80,11 @@ class BarPlot:
             x_padding = 16 * GLOBAL_SCALE
             y_padding = 4 * GLOBAL_SCALE
 
-
             label = self.sprites_labels[i]
-            label.x = x - x_padding
+            label.x = max(
+                x - x_padding,
+                self.x + label.content_width + x_padding
+            )
             label.y = y + y_padding
     
     def update_ticks(self, data_handler: DataHandler, entry_index: float, max_value):
@@ -133,7 +135,7 @@ class BarPlot:
         update_tick_at_unit(next, rem * 255)
 
     def draw(self, data_handler: DataHandler, entry_index: float):
-        max_value = data_handler.get_lerped_max(entry_index)
+        max_value = data_handler.get_max_bar_width(entry_index)
 
         self.update_ticks(data_handler, entry_index, max_value)
         self.update_bars(entry_index, max_value)

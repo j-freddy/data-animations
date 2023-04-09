@@ -1,7 +1,10 @@
 import math
 import numpy as np
+import pandas as pd
 
 
-arr = [1, 2, 3]
+data = pd.read_csv("data/example.csv")
+i = 5
+foo = data.values[i, 0]
 
-print(arr[math.floor(1.5)])
+print(foo)
