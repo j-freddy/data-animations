@@ -68,7 +68,7 @@ class GUI:
         )
     
     def update(self, dt):
-        entry_index = self.frames / FRAMES_PER_ENTRY + 600
+        entry_index = self.frames / FRAMES_PER_ENTRY
 
         # Stop if end reached
         if entry_index >= self.data_handler.num_entries():
