@@ -1,5 +1,7 @@
 # Data Animations
 
+WIP: This project is incomplete.
+
 Using [pyglet][3] as a multimedia library.
 
 ## Setup
