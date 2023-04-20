@@ -111,7 +111,7 @@ class BarPlot:
                 x = self.value_to_x(value, max_value)
 
                 tick = shapes.Rectangle(
-                    x - width / 2, self.y, width, self.height,
+                    x - width, self.y, width, self.height,
                     color=color,
                     batch=self.batch_tick,
                 )

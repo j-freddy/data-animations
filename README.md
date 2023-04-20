@@ -23,6 +23,27 @@ Python 3.10.8
 $ pip install -r requirements.txt
 ```
 
+## Run
+
+### Development
+
+Set `PROD = False` in `const.py`.
+
+```bash
+$ python main.py
+```
+
+### Production
+
+Set `PROD = True` in `const.py` and `FILEOUT = video.mp4` or whatever you want
+the filename to be.
+
+```bash
+$ python main.py
+```
+
+At the end of the animation, the video can be found under `out/video.mp4`.
+
 ## Contribute
 
 ### Update requirements
