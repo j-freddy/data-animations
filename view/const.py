@@ -1,11 +1,7 @@
-# Set to True during production
-PROD = True
-DIROUT = "out"
-FILEOUT = "video.mp4"
-# Local screen is too small for 1920x1080
-GLOBAL_SCALE = 2 if PROD else 1
-
+PROD_DEFAULT = False
 FPS = 60
-FRAMES_PER_ENTRY = 2.5
-WINDOW_W = 960
-WINDOW_H = 540
+FRAMES_PER_ENTRY_DEFAULT = 2.5
+
+# Local screen is too small for 1920x1088
+WINDOW_W = 1920
+WINDOW_H = 1088

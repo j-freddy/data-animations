@@ -3,23 +3,24 @@ import numpy as np
 import pyglet
 from pyglet import shapes
 
-from model.const import NUM_VISIBLE
 from model.data_handler import DataHandler
 from model.lerp import Lerp
 from model.utils import Utils
-from view.const import GLOBAL_SCALE
 
 class BarPlot:
-    def __init__(self, data_handler: DataHandler, x, y, width, height):
+    def __init__(self, data_handler: DataHandler, x, y, width, height, num_visible=10, prod=False):
         self.x = x
         self.y = y
         self.width = width
         self.full_height = height
 
-        # Make space for axis labels
-        self.height = self.full_height - 64 * GLOBAL_SCALE
+        self.num_visible = num_visible
 
-        self.bar_height = 0.75 * self.height / NUM_VISIBLE
+        # Make space for axis labels
+        self.scale = 1 if prod else 0.5
+        self.height = self.full_height - 64 * self.scale
+
+        self.bar_height = 0.75 * self.height / self.num_visible
 
         # Cache order of data features
         self.data_features = data_handler.features.values()
@@ -32,7 +33,7 @@ class BarPlot:
         return self.x + self.width * value / max_value
 
     def rank_to_y(self, rank):
-        return self.y + (NUM_VISIBLE - rank - 1) * self.height / NUM_VISIBLE
+        return self.y + (self.num_visible - rank - 1) * self.height / self.num_visible
 
     def initialise_sprites(self):
         self.sprites_bars = []
@@ -63,7 +64,7 @@ class BarPlot:
             rank = Lerp.weighted_avg(feature.ranks, entry_index, kernel_size=11)
 
             # Do not update bars if they are not visible
-            if np.linalg.norm(NUM_VISIBLE + 1 - rank < 1e-3):
+            if np.linalg.norm(self.num_visible + 1 - rank < 1e-3):
                 continue
 
             value = Lerp.linear(feature.values, entry_index)
@@ -77,8 +78,8 @@ class BarPlot:
             bar.width = x - self.x
             bar.height = self.bar_height
 
-            x_padding = 16 * GLOBAL_SCALE
-            y_padding = 4 * GLOBAL_SCALE
+            x_padding = 16 * self.scale
+            y_padding = 4 * self.scale
 
             label = self.sprites_labels[i]
             label.x = max(
@@ -101,8 +102,8 @@ class BarPlot:
         curr = data_handler.available_units[math.floor(unit)]
         next = data_handler.available_units[math.ceil(unit)]
 
-        width = 2 * GLOBAL_SCALE
-        padding = 8 * GLOBAL_SCALE
+        width = 2 * self.scale
+        padding = 8 * self.scale
 
         def update_tick_at_unit(unit, opacity):
             color = (173, 181, 189, int(opacity))
@@ -119,7 +120,7 @@ class BarPlot:
                 label = pyglet.text.Label(
                     str(value),
                     font_name="Impact",
-                    font_size=24 * GLOBAL_SCALE,
+                    font_size=24 * self.scale,
                     color=color,
                     x=x,
                     y=self.y + self.height + padding,

@@ -1,7 +1,8 @@
+import os
 import numpy as np
 import pandas as pd
 
-from model.const import NUM_VISIBLE
+from model.const import DIR_IN
 from model.feature import Feature
 from model.lerp import Lerp
 
@@ -9,12 +10,13 @@ from model.lerp import Lerp
 # - feature = user
 # - entry = day
 class DataHandler:
-    def __init__(self, filepath):
-        self.data = pd.read_csv(filepath)
+    def __init__(self, filename, num_visible=10):
+        self.data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
+        self.num_visible = num_visible
 
         # Dictionary mapping name to Feature object
         self.features = {
-            name: Feature(name, series.values)
+            name: Feature(name, series.values, num_visible)
             for name, series in self.get_features().items()
         }
 
@@ -51,7 +53,7 @@ class DataHandler:
 
     def get_top_features_ids(self):
         return self.get_features().apply(
-            lambda entry: entry.nlargest(NUM_VISIBLE).index.to_numpy(),
+            lambda entry: entry.nlargest(self.num_visible).index.to_numpy(),
             axis=1,
         )
     
