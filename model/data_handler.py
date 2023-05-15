@@ -20,7 +20,7 @@ class DataHandler:
 
         # Available units
         base = np.array([1, 2, 5])
-        exp_limit = 6
+        exp_limit = int(np.ceil(np.log10(self.get_max())))
 
         self.available_units = np.outer(
             np.power(10, np.arange(0, exp_limit)),
@@ -54,6 +54,9 @@ class DataHandler:
             lambda entry: entry.nlargest(NUM_VISIBLE).index.to_numpy(),
             axis=1,
         )
+    
+    def get_max(self):
+        return self.get_features().max().max()
     
     def get_maxes(self):
         return self.get_features().max(axis=1)
