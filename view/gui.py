@@ -1,6 +1,5 @@
 import imageio.v2 as iio
 import os
-import sys
 import numpy as np
 import pyglet
 from pyglet import shapes

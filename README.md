@@ -44,7 +44,8 @@ See [Quick Start](#quick-start) to set up the environment.
 
 Run the following command for a description of usage options. We also provide a
 example below. To use your own dataset, place the file under `data/`, then
-specify the file with `-data` flag. Only `.csv` files are supported.
+specify the file with `-data` flag. Only `.csv` files are supported. **The
+program assumes the 1st column specifies the progress or timeline (e.g. date).**
 ```bash
 $ python main.py -h
 usage: main.py [-h] [-data DATA] [-title TITLE] [-speed SPEED] [-visible VISIBLE] [-prod PROD] [-out OUT]
@@ -61,7 +62,29 @@ options:
 
 ### Example
 
-TODO Coming soon
+TODO Coming soon!
+
+### Advanced Settings
+
+This project decouples the GUI (view) from the logic (model). Some settings are
+set as constants in `model/const.py` and `view/const.py`. You can customise
+these settings as follows. Note the `DEFAULT` constants are not necessary to
+change, as they can be changed through the command line interface.
+
+```py
+# model/const.py
+DIR_IN       # The program searches this directory for the dataset
+DIR_OUT      # Videos are output in this directory
+
+# view/const.py
+FPS         # Frames per second of video
+WINDOW_W    # Window width
+WINDOW_H    # Window height
+```
+
+A lot of the layout and visuals (e.g. bar width, margins, font size) are
+hardcoded in files within `view/`, most notably within `view/gui.py`. You can
+update the visuals to your preferences by modifying the code there.
 
 ## Credits
 
@@ -80,7 +103,7 @@ videos.
 
 ## Contribute
 
-### Update requirements
+### Update Requirements
 
 ```bash
 $ pip freeze > requirements.txt
