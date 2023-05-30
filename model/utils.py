@@ -21,40 +21,40 @@ class Utils:
         parser.add_argument(
             "-data",
             type=str,
-            help=f"Input data filename (without extension). Must be .csv and reside in data/. Defaults to {FILE_IN_DEFAULT}",
+            help=f"Input data filename (without extension). Must be .csv and reside in data/. (default: {FILE_IN_DEFAULT})",
             default=FILE_IN_DEFAULT,
         )
         parser.add_argument(
             "-title",
             type=str,
-            help=f"Title displayed in video. Defaults to {TITLE_DEFAULT}",
+            help=f"Title displayed in video. (default: {TITLE_DEFAULT})",
             default=TITLE_DEFAULT,
         )
         parser.add_argument(
-            "-speed",
+            "-fpe",
             type=float,
-            help=f"Animation speed (frames per entry). Defaults to {FRAMES_PER_ENTRY_DEFAULT}",
+            help=f"Frames per entry. A larger value results in slower animation. (default: {FRAMES_PER_ENTRY_DEFAULT})",
             default=FRAMES_PER_ENTRY_DEFAULT,
         )
         parser.add_argument(
             "-visible",
             type=int,
-            help=f"Number of top visible features. Defaults to {NUM_VISIBLE_DEFAULT}",
+            help=f"Number of top visible features. (default: {NUM_VISIBLE_DEFAULT})",
             default=NUM_VISIBLE_DEFAULT,
         )
         parser.add_argument(
             "-prod",
-            type=bool,
-            help=f"If True, enter production mode to record and save animation as .mp4 file. Defaults to {PROD_DEFAULT}",
+            action=argparse.BooleanOptionalAction,
+            help=f"If True, enter production mode to record and save animation as .mp4 file.",
             default=PROD_DEFAULT,
         )
         parser.add_argument(
             "-out",
             type=str,
-            help=f"If in production mode, specifies output filename (without extension). Defaults to {FILE_OUT_DEFAULT}",
+            help=f"If in production mode, specifies output filename (without extension). (default: {FILE_OUT_DEFAULT})",
             default=FILE_OUT_DEFAULT,
         )
 
         args = parser.parse_args()
 
-        return args.data, args.title, args.speed, args.visible, args.prod, args.out
+        return args.data, args.title, args.fpe, args.visible, args.prod, args.out
