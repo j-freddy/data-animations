@@ -30,10 +30,11 @@ $ python main.py
 Cool! Now, let's try to save this animation as a video. Run the following
 command. You may find the window is too large to fit on your screen (depending
 on your display size), but that's OK! Simply wait until it finishes running.
-Alternatively, you can close the window before the animation finishes, but only
-part of the animation gets saved.
+**You can also let it run in the background.** (You can even drag the window and
+it will not affect the final video.) Alternatively, you can close the window
+before the animation finishes, but only part of the animation gets saved.
 ```bash
-$ python main.py -prod True
+$ python main.py -prod
 ```
 
 You can find the saved video under `out/video.mp4`.
@@ -48,21 +49,31 @@ specify the file with `-data` flag. Only `.csv` files are supported. **The
 program assumes the 1st column specifies the progress or timeline (e.g. date).**
 ```bash
 $ python main.py -h
-usage: main.py [-h] [-data DATA] [-title TITLE] [-speed SPEED] [-visible VISIBLE] [-prod PROD] [-out OUT]
+usage: main.py [-h] [-data DATA] [-title TITLE] [-fpe FPE] [-visible VISIBLE] [-prod] [-out OUT]
 
 options:
   -h, --help        show this help message and exit
-  -data DATA        Input data filename (without extension). Must be .csv and reside in data/. Defaults to example
-  -title TITLE      Title displayed in video. Defaults to IQs over time
-  -speed SPEED      Animation speed (frames per entry). Defaults to 2.5
-  -visible VISIBLE  Number of top visible features. Defaults to 10
-  -prod PROD        If True, enter production mode to record and save animation as .mp4 file. Defaults to False
-  -out OUT          If in production mode, specifies output filename (without extension). Defaults to video
+  -data DATA        Input data filename (without extension). Must be .csv and reside in data/. (default: example)
+  -title TITLE      Title displayed in video. (default: IQs over time)
+  -fpe FPE          Frames per entry. A larger value results in slower animation. (default: 2.5)
+  -visible VISIBLE  Number of top visible features. (default: 10)
+  -prod             If True, enter production mode to record and save animation as .mp4 file. (default: False)
+  -out OUT          If in production mode, specifies output filename (without extension). (default: video)
 ```
 
 ### Example
 
-TODO Coming soon!
+Let's use the example data, but make the animation really fast! Let's also show
+more data.
+```bash
+$ python main.py -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14
+```
+
+Cool! Now, let's render the video and save it. (You can let the video run in the
+background.)
+```bash
+$ python main.py -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14 -prod -out speedyvid
+```
 
 ### Advanced Settings
 
@@ -85,6 +96,21 @@ WINDOW_H    # Window height
 A lot of the layout and visuals (e.g. bar width, margins, font size) are
 hardcoded in files within `view/`, most notably within `view/gui.py`. You can
 update the visuals to your preferences by modifying the code there.
+
+### Very advanced settings
+
+If your custom dataset does not meet the requirements, I recommend preprocessing
+it.
+
+Since this project decouples the GUI and logic, you only need to modify the code
+in `model/data_handler.py` to preprocess your custom dataset.
+
+I recommend creating a method `preprocess_data` in `DataHandler` and calling it
+in the constructor immediately after `self.data =
+pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))`. This method should be
+written to modify `self.data` to meet the requirements.
+
+Example coming soon!
 
 ## Credits
 
