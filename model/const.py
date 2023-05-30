@@ -1,5 +1,5 @@
 DIR_IN = "data"
-FILE_IN_DEFAULT = "example"
+FILE_IN_DEFAULT = "largest-cities"
 DIR_OUT = "out"
 FILE_OUT_DEFAULT = "video"
 

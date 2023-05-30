@@ -1,4 +1,5 @@
 import os
+import sys
 import numpy as np
 import pandas as pd
 
@@ -12,6 +13,8 @@ from model.lerp import Lerp
 class DataHandler:
     def __init__(self, filename, num_visible=10):
         self.data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
+        self.preprocess_data()
+
         self.num_visible = num_visible
 
         # Dictionary mapping name to Feature object
@@ -41,6 +44,41 @@ class DataHandler:
 
         self.update_ranks()
     
+    # noqa
+    # Specific for largest-cities.csv only
+    def preprocess_data(self):
+        n, _ = self.data.shape
+        ENTRY_PER_YEAR = 30
+
+        # Filter unnecessary columns
+        selected_columns = [
+            "Year",
+            "Urban Agglomeration",
+            "Population (millions)",
+        ]
+        self.data = self.data[selected_columns]
+
+        # Get list of cities
+        cities = self.data["Urban Agglomeration"].unique()
+
+        # Construct new DataFrame that fits requirements of this project
+        new_data = pd.DataFrame(columns=["Year"] + list(cities))
+
+        entry_index = 0
+
+        for year_index in range(n // ENTRY_PER_YEAR):
+            new_data.loc[year_index, "Year"] = self.data.iloc[year_index * ENTRY_PER_YEAR]["Year"]
+
+            for _ in range(ENTRY_PER_YEAR):
+                entry = self.data.iloc[entry_index]
+                new_data.loc[year_index, entry["Urban Agglomeration"]]\
+                    = float(entry["Population (millions)"].replace(" ", ""))
+                entry_index += 1
+        
+        new_data.fillna(0, inplace=True)
+        
+        self.data = new_data
+    
     def num_entries(self):
         return self.get_features().shape[0]
 
@@ -49,7 +87,7 @@ class DataHandler:
         return self.data.iloc[:, 1:]
 
     def get_time(self, i):
-        return self.data.values[i, 0]
+        return str(self.data.values[i, 0])
 
     def get_top_features_ids(self):
         return self.get_features().apply(

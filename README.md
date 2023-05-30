@@ -1,5 +1,8 @@
 # Data Animations
 
+**You have wandered into a side branch! Please go back to the `main` branch to
+learn about this project.**
+
 ![Preview](preview.png)
 
 Using [pyglet][3] as a multimedia library.
