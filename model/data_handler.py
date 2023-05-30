@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 
-from model.const import DIR_IN
+from model.const import BAR_WIDTH_LERP_KERNEL_SIZE, DIR_IN
 from model.feature import Feature
 from model.lerp import Lerp
 
@@ -66,7 +66,7 @@ class DataHandler:
     def get_max_bar_width(self, entry_index: float):
         # TODO Magic numbers
         # 1.15 ensures bar never goes off-screen
-        return Lerp.weighted_avg(self.maxes, entry_index, kernel_size=29) * 1.15
+        return Lerp.weighted_avg(self.maxes, entry_index, kernel_size=BAR_WIDTH_LERP_KERNEL_SIZE) * 1.15
 
     def get_units_indices(self):
         units_indices = np.empty(self.num_entries())

@@ -6,6 +6,7 @@ from pyglet import shapes
 from model.data_handler import DataHandler
 from model.lerp import Lerp
 from model.utils import Utils
+from view.const import RANK_LERP_KERNEL_SIZE
 
 class BarPlot:
     def __init__(self, data_handler: DataHandler, x, y, width, height, num_visible=10, prod=False):
@@ -60,8 +61,7 @@ class BarPlot:
     
     def update_bars(self, entry_index: float, max_value):
         for i, feature in enumerate(self.data_features):
-            # TODO Magic number
-            rank = Lerp.weighted_avg(feature.ranks, entry_index, kernel_size=11)
+            rank = Lerp.weighted_avg(feature.ranks, entry_index, kernel_size=RANK_LERP_KERNEL_SIZE)
 
             # Do not update bars if they are not visible
             if np.linalg.norm(self.num_visible + 1 - rank < 1e-3):
