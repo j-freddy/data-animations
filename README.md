@@ -110,7 +110,7 @@ in the constructor immediately after `self.data =
 pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))`. This method should be
 written to modify `self.data` to meet the requirements.
 
-Example coming soon!
+For an example, see `project-largest-cities` branch.
 
 ## Credits
 
