@@ -10,7 +10,7 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 9,1950,9,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,4.6 041 43 0
 10,1950,10,156,China,20656,Shanghai,5,31.2222,121.4581,4.2 880 91 0
 11,1950,11,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,4.0 455 14 0
-12,1950,12,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,3.3 650 81 0
+12,1950,12,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,3.3 650 81 0
 13,1950,13,276,Germany,204296,Berlin,,52.5244,13.4105,3.3 376 21 0
 14,1950,14,840,United States of America,23098,Philadelphia,,39.9523,-75.1638,3.1 278 06 0
 15,1950,15,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,3.0 888 11 0
@@ -21,7 +21,7 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 20,1950,20,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,2.4 935 14 0
 21,1950,21,156,China,20689,Tianjin,5,39.1088,117.1886,2.4 670 96 0
 22,1950,22,826,United Kingdom,22862,Manchester,8,53.4810,-2.2374,2.4 222 46 0
-23,1950,23,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,2.3 340 38 0
+23,1950,23,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,2.3 340 38 0
 24,1950,24,392,Japan,204583,Chukyo M.M.A. (Nagoya),,35.1815,136.9064,2.2 368 78 0
 25,1950,25,826,United Kingdom,22835,Birmingham (West Midlands),8,52.4814,-1.8998,2.2 289 15 0
 26,1950,26,156,China,20666,Shenyang,5,41.7922,123.4328,2.1 475 22 0
@@ -40,7 +40,7 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 39,1955,9,840,United States of America,22956,Chicago,,41.8500,-87.6501,5.5 645 73 0
 40,1955,10,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,5.2 190 86 0
 41,1955,11,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,5.1 543 01 0
-42,1955,12,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,4.2 938 78 0
+42,1955,12,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,4.2 938 78 0
 43,1955,13,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,3.7 262 1 0
 44,1955,14,76,Brazil,20272,Rio de Janeiro,,-22.9028,-43.2075,3.6 873 44 0
 45,1955,15,840,United States of America,23098,Philadelphia,,39.9523,-75.1638,3.5 110 99 0
@@ -48,7 +48,7 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 47,1955,17,643,Russian Federation,22365,Sankt Peterburg (Saint Petersburg),,59.9299,30.3262,3.1 408 26 0
 48,1955,18,840,United States of America,22974,Detroit,,42.3871,-83.1026,3.1 397 18 0
 49,1955,19,392,Japan,204583,Chukyo M.M.A. (Nagoya),,35.1815,136.9064,3.1 000 66 0
-50,1955,20,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,3.0 438 28 0
+50,1955,20,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,3.0 438 28 0
 51,1955,21,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,3.0 291 98 0
 52,1955,22,156,China,20689,Tianjin,5,39.1088,117.1886,2.7 606 76 0
 53,1955,23,840,United States of America,22939,Boston,,42.3479,-71.0645,2.6 801 81 0
@@ -70,11 +70,11 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 69,1960,9,840,United States of America,22956,Chicago,,41.8500,-87.6501,6.1 831 53 0
 70,1960,10,643,Russian Federation,22299,Moskva (Moscow),,55.7550,37.6218,6.1 699 61 0
 71,1960,11,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,5.9 102 1 0
-72,1960,12,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,5.4 791 84 0
+72,1960,12,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,5.4 791 84 0
 73,1960,13,76,Brazil,20272,Rio de Janeiro,,-22.9028,-43.2075,4.4 931 82 0
 74,1960,14,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,4.4 149 04 0
 75,1960,15,392,Japan,204583,Chukyo M.M.A. (Nagoya),,35.1815,136.9064,4.2 967 36 0
-76,1960,16,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,3.9 697 59 0
+76,1960,16,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,3.9 697 59 0
 77,1960,17,840,United States of America,23098,Philadelphia,,39.9523,-75.1638,3.9 300 26 0
 78,1960,18,156,China,20464,Beijing,11,39.9075,116.3972,3.9 004 41 0
 79,1960,19,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,3.6 801 6 0
@@ -96,14 +96,15 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 95,1965,5,250,France,20985,Paris,,48.8534,2.3488,7.8 551 85 0
 96,1965,6,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,7.5 485 11 0
 97,1965,7,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,7.4 076 34 0
-98,1965,8,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,6.9 691 57 0
+98,1965,8,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,6.9 691 57 0
+98,1965,8,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,6.9 691 57 0
 99,1965,9,840,United States of America,22956,Chicago,,41.8500,-87.6501,6.6 388 74 0
 100,1965,10,643,Russian Federation,22299,Moskva (Moscow),,55.7550,37.6218,6.6 217 8 0
 101,1965,11,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,6.5 893 84 0
 102,1965,12,156,China,20656,Shanghai,5,31.2222,121.4581,6.4 281 31 0
 103,1965,13,392,Japan,204583,Chukyo M.M.A. (Nagoya),,35.1815,136.9064,5.9 542 67 0
 104,1965,14,76,Brazil,20272,Rio de Janeiro,,-22.9028,-43.2075,5.5 226 74 0
-105,1965,15,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,5.4 941 5 0
+105,1965,15,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,5.4 941 5 0
 106,1965,16,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,5.3 143  0
 107,1965,17,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,4.7 379 68 0
 108,1965,18,156,China,20464,Beijing,11,39.9075,116.3972,4.5 820 17 0
@@ -122,11 +123,11 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 121,1970,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,23.2 975 03 0
 122,1970,2,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,16.1 911 8 0
 123,1970,3,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,15.2 715 1 0
-124,1970,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,8.8 309 47 0
+124,1970,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,8.8 309 47 0
 125,1970,5,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,8.4 161 7 0
 126,1970,6,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,8.3 776 85 0
 127,1970,7,250,France,20985,Paris,,48.8534,2.3488,8.2 081 21 0
-128,1970,8,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,7.6 204 9 0
+128,1970,8,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,7.6 204 9 0
 129,1970,9,826,United Kingdom,22860,London,2,51.5085,-0.1257,7.5 094 05 0
 130,1970,10,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,7.3 293 72 0
 131,1970,11,643,Russian Federation,22299,Moskva (Moscow),,55.7550,37.6218,7.1 064 57 0
@@ -152,8 +153,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 151,1975,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,26.6 147 33 0
 152,1975,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,16.2 981 24 0
 153,1975,3,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,15.8 802 71 0
-154,1975,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,10.7 338 6 0
-155,1975,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,9.6 140 16 0
+154,1975,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,10.7 338 6 0
+155,1975,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,9.6 140 16 0
 156,1975,6,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,9.1 432 19 0
 157,1975,7,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,8.9 255 18 0
 158,1975,8,250,France,20985,Paris,,48.8534,2.3488,8.5 578 44 0
@@ -182,8 +183,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 181,1980,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,28.5 485 12 0
 182,1980,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,17.0 275 47 0
 183,1980,3,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,15.6 014 01 0
-184,1980,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,13.0 276 2 0
-185,1980,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,12.0 894 54 0
+184,1980,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,13.0 276 2 0
+185,1980,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,12.0 894 54 0
 186,1980,6,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,9.9 197 81 0
 187,1980,7,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,9.5 115 68 0
 188,1980,8,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,9.1 995 43 0
@@ -212,8 +213,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 211,1985,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,30.3 037 94 0
 212,1985,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,17.5 826 32 0
 213,1985,3,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,15.8 267 88 0
-214,1985,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,14.2 782 16 0
-215,1985,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,13.3 948 15 0
+214,1985,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,14.2 782 16 0
+215,1985,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,13.3 948 15 0
 216,1985,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,10.6 855 3 0
 217,1985,7,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,10.5 234 42 0
 218,1985,8,840,United States of America,23052,Los Angeles-Long Beach-Santa Ana,,34.0317,-118.2417,10.1 811 72 0
@@ -242,8 +243,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 241,1990,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,32.5 300 03 0
 242,1990,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,18.3 887 83 0
 243,1990,3,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,16.0 855 99 0
-244,1990,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,15.6 423 18 0
-245,1990,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,14.7 758 4 0
+244,1990,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,15.6 423 18 0
+245,1990,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,14.7 758 4 0
 246,1990,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,12.3 550 9 0
 247,1990,7,32,Argentina,20058,Buenos Aires,4,-34.6051,-58.4004,11.1 475 66 0
 248,1990,8,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,10.9 741 77 0
@@ -271,9 +272,9 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 270,1990,30,356,India,21321,Chennai (Madras),,13.0531,80.2488,5.3 320 57 0
 271,1995,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,33.5 865 73 0
 272,1995,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,18.9 395 88 0
-273,1995,3,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,17.0 174 69 0
+273,1995,3,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,17.0 174 69 0
 274,1995,4,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,16.9 427 7 0
-275,1995,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,15.9 134 73 0
+275,1995,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,15.9 134 73 0
 276,1995,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,14.1 353 63 0
 277,1995,7,356,India,21228,Delhi,16,28.6667,77.2167,12.1 382 33 0
 278,1995,8,356,India,21211,Kolkata (Calcutta),,22.5335,88.3560,11.9 921 94 0
@@ -301,9 +302,9 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 300,1995,30,566,Nigeria,22007,Lagos,19,6.4531,3.3958,5.9 826 8 0
 301,2000,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,34.4 499 08 0
 302,2000,2,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,18.6 600 22 0
-303,2000,3,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,18.4 570 27 0
+303,2000,3,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,18.4 570 27 0
 304,2000,4,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,17.8 133 71 0
-305,2000,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,17.0 140 78 0
+305,2000,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,17.0 140 78 0
 306,2000,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,16.1 465 27 0
 307,2000,7,356,India,21228,Delhi,16,28.6667,77.2167,15.6 918 99 0
 308,2000,8,156,China,20656,Shanghai,5,31.2222,121.4581,14.2 465 41 0
@@ -330,10 +331,10 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 329,2000,29,826,United Kingdom,22860,London,2,51.5085,-0.1257,7.2 728 19 0
 330,2000,30,364,Iran (Islamic Republic of),21523,Tehran,,35.6944,51.4215,7.1 281 4 0
 331,2005,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,35.6 215 44 0
-332,2005,2,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,19.2 760 65 0
+332,2005,2,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,19.2 760 65 0
 333,2005,3,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,18.7 620 99 0
 334,2005,4,356,India,21228,Delhi,16,28.6667,77.2167,18.6 913 3 0
-335,2005,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,18.2 881 34 0
+335,2005,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,18.2 881 34 0
 336,2005,6,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,18.0 871 74 0
 337,2005,7,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,17.2 570 72 0
 338,2005,8,156,China,20656,Shanghai,5,31.2222,121.4581,17.0 557 88 0
@@ -362,8 +363,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 361,2010,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,36.8 596 26 0
 362,2010,2,356,India,21228,Delhi,16,28.6667,77.2167,21.9 878 95 0
 363,2010,3,156,China,20656,Shanghai,5,31.2222,121.4581,20.3 143 09 0
-364,2010,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,20.1 366 81 0
-365,2010,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,19.6 598 08 0
+364,2010,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,20.1 366 81 0
+365,2010,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,19.6 598 08 0
 366,2010,6,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,19.3 126 46 0
 367,2010,7,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,18.3 652 62 0
 368,2010,8,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,18.2 574 13 0
@@ -392,8 +393,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 391,2015,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,37.2 561 09 0
 392,2015,2,356,India,21228,Delhi,16,28.6667,77.2167,25.8 658 75 0
 393,2015,3,156,China,20656,Shanghai,5,31.2222,121.4581,23.4 821 81 0
-394,2015,4,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,21.3 397 81 0
-395,2015,5,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,20.8 830 46 0
+394,2015,4,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,21.3 397 81 0
+395,2015,5,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,20.8 830 46 0
 396,2015,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,19.3 157 37 0
 397,2015,7,392,Japan,206459,Kinki M.M.A. (Osaka),3,34.6758,135.5538,19.3 047 22 0
 398,2015,8,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,18.8 200 72 0
@@ -422,8 +423,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 421,2020,1,392,Japan,21671,Tokyo,1,35.6895,139.6917,37.3 931 29 0
 422,2020,2,356,India,21228,Delhi,16,28.6667,77.2167,30.2 909 36 0
 423,2020,3,156,China,20656,Shanghai,5,31.2222,121.4581,27.0 584 79 0
-424,2020,4,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,22.0 430 28 0
-425,2020,5,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,21.7 823 78 0
+424,2020,4,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,22.0 430 28 0
+425,2020,5,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,21.7 823 78 0
 426,2020,6,50,Bangladesh,20119,Dhaka,18,23.7104,90.4074,21.0 058 6 0
 427,2020,7,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,20.9 006 04 0
 428,2020,8,156,China,20464,Beijing,11,39.9075,116.3972,20.4 626 1 0
@@ -454,8 +455,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 453,2025,3,156,China,20656,Shanghai,5,31.2222,121.4581,30.4 821 4 0
 454,2025,4,50,Bangladesh,20119,Dhaka,18,23.7104,90.4074,24.6 528 64 0
 455,2025,5,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,23.0 742 25 0
-456,2025,6,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,22.9 900 07 0
-457,2025,7,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,22.7 524 14 0
+456,2025,6,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,22.9 900 07 0
+457,2025,7,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,22.7 524 14 0
 458,2025,8,156,China,20464,Beijing,11,39.9075,116.3972,22.5 964 55 0
 459,2025,9,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,22.0 889 53 0
 460,2025,10,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,19.1 540 24 0
@@ -486,8 +487,8 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 485,2030,5,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,25.5 166 96 0
 486,2030,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,24.5 724 5 0
 487,2030,7,156,China,20464,Beijing,11,39.9075,116.3972,24.2 819 13 0
-488,2030,8,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,24.1 105 99 0
-489,2030,9,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,23.8 242 23 0
+488,2030,8,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,24.1 105 99 0
+489,2030,9,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,23.8 242 23 0
 490,2030,10,180,Democratic Republic of the Congo,20853,Kinshasa,,-4.3276,15.3136,21.9 143 42 0
 491,2030,11,566,Nigeria,22007,Lagos,19,6.4531,3.3958,20.6 001 56 0
 492,2030,12,586,Pakistan,22044,Karachi,,24.9056,67.0822,20.4 318 48 0
@@ -516,9 +517,9 @@ Index,Year,"Rank Order","Country code",Country or Area,City code,Urban Agglomera
 515,2035,5,818,Egypt,22812,Al-Qahirah (Cairo),7,30.0392,31.2394,28.5 043 51 0
 516,2035,6,356,India,21206,Mumbai (Bombay),,19.0740,72.8808,27.3 428 19 0
 517,2035,7,180,Democratic Republic of the Congo,20853,Kinshasa,,-4.3276,15.3136,26.6 818 25 0
-518,2035,8,484,Mexico,21853,Ciudad de M�xico (Mexico City),6,19.4273,-99.1419,25.4 146 24 0
+518,2035,8,484,Mexico,21853,Ciudad de Mexico (Mexico City),6,19.4273,-99.1419,25.4 146 24 0
 519,2035,9,156,China,20464,Beijing,11,39.9075,116.3972,25.3 659 2 0
-520,2035,10,76,Brazil,20287,S�o Paulo,,-23.5475,-46.6361,24.4 901 36 0
+520,2035,10,76,Brazil,20287,Sao Paulo,,-23.5475,-46.6361,24.4 901 36 0
 521,2035,11,566,Nigeria,22007,Lagos,19,6.4531,3.3958,24.4 187 68 0
 522,2035,12,586,Pakistan,22044,Karachi,,24.9056,67.0822,23.1 281 37 0
 523,2035,13,840,United States of America,23083,New York-Newark,,40.7170,-74.0037,20.8 171 7 0
