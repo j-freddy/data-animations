@@ -13,8 +13,17 @@ from view.const import (
     WINDOW_W,
 )
 
+
 class GUI:
-    def __init__(self, data_handler, title_label, frames_per_entry=2.5, num_visible=10, prod=False, file_out=None):
+    def __init__(
+        self,
+        data_handler,
+        title_label,
+        frames_per_entry=2.5,
+        num_visible=10,
+        prod=False,
+        file_out=None,
+    ):
         self.data_handler: DataHandler = data_handler
 
         self.title_label = title_label
@@ -42,21 +51,25 @@ class GUI:
         if prod:
             if not os.path.exists(DIR_OUT):
                 os.makedirs(DIR_OUT)
-            
-            self.writer = iio.get_writer(os.path.join(DIR_OUT, f"{file_out}.mp4"), fps=FPS)
+
+            self.writer = iio.get_writer(
+                os.path.join(DIR_OUT, f"{file_out}.mp4"), fps=FPS
+            )
 
         self.batch_background = pyglet.graphics.Batch()
         self.batch_foreground = pyglet.graphics.Batch()
         self.initialise_sprites()
-    
+
     def w(self):
         return int(WINDOW_W * self.scale)
 
     def h(self):
         return int(WINDOW_H * self.scale)
-    
+
     def initialise_sprites(self):
-        self.sprites_base = shapes.Rectangle(0, 0, self.w(), self.h(), color=(33, 37, 41), batch=self.batch_background)
+        self.sprites_base = shapes.Rectangle(
+            0, 0, self.w(), self.h(), color=(33, 37, 41), batch=self.batch_background
+        )
 
         padding = 8 * self.scale
 
@@ -99,22 +112,22 @@ class GUI:
         frame = np.flipud(frame)
 
         self.writer.append_data(frame)
-    
+
     def update(self, dt):
         entry_index = self.frames / self.frames_per_entry
 
         # Stop if end reached
-        if entry_index >= self.data_handler.num_entries():
+        if entry_index >= self.data_handler.num_series():
             pyglet.clock.unschedule(self.update)
             if self.prod:
                 self.writer.close()
             self.window.close()
             return
-    
+
         self.entry_index: float = entry_index
 
         # Update background
-        self.sprites_time.text = self.data_handler.get_time(int(self.entry_index))
+        self.sprites_time.text = self.data_handler.get_timestamp(int(self.entry_index))
 
         # Go to next frame
         if self.prod:
@@ -135,6 +148,6 @@ class GUI:
             # Capture frame during production
             if self.prod:
                 self.capture_frame()
-        
+
         pyglet.clock.schedule_interval(self.update, 1 / FPS)
         pyglet.app.run()

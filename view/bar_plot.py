@@ -144,7 +144,7 @@ class BarPlot:
         update_tick_at_unit(next, rem * 255)
 
     def draw(self, data_handler: DataHandler, entry_index: float):
-        max_value = data_handler.get_max_bar_width(entry_index)
+        max_value = data_handler.calculate_max_bar_width_value(entry_index)
 
         self.update_ticks(data_handler, entry_index, max_value)
         self.update_bars(entry_index, max_value)
