@@ -76,4 +76,6 @@ It is not necessary if you only want to use the program.
 
 ## Credits
 
-TODO
+Inspired by @carykh's [data animations program][carykh-drawer] written in Processing.
+
+[carykh-drawer]: https://github.com/carykh/AbacabaTutorialDrawer
