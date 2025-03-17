@@ -12,7 +12,7 @@ from view.const import FRAMES_PER_TIMESTAMP_DEFAULT, PROD_DEFAULT
 
 class Utils:
     @staticmethod
-    def get_random_color(presentation=True) -> tuple[int, int, int]:
+    def get_random_color(presentation: bool = True) -> tuple[int, int, int]:
         """
         Generate a random RGB color.
 

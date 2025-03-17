@@ -3,18 +3,17 @@ import numpy as np
 import pandas as pd
 
 from model.const import BAR_WIDTH_LERP_KERNEL_SIZE, DIR_IN
-from model.feature import Feature
+from model.data_series import DataSeries
 from model.lerp import Lerp
 
 
 class DataHandler:
-    def __init__(self, filename, num_visible=10):
+    def __init__(self, filename: str, num_visible: int = 10) -> None:
         self.data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
         self.num_visible = num_visible
 
-        # Dictionary mapping name to Feature object
-        self.features = {
-            name: Feature(name, series.values, num_visible)
+        self.data_series = {
+            name: DataSeries(name, series.values, num_visible)
             for name, series in self.get_features().items()
         }
 
@@ -27,12 +26,14 @@ class DataHandler:
             base,
         ).ravel()
 
-        # ================ Perform calculations ================
+        # Perform calculations
 
         # Feature ids of features that are visible per entry
         self.top_features_ids = self.get_top_features_ids()
+
         # Max feature value per entry
         self.maxes = self.get_maxes()
+
         # Unit choice per entry
         # Usage: self.available_units[self.units_indices[entry_index]]
         self.units_indices = self.get_units_indices()
@@ -90,4 +91,4 @@ class DataHandler:
     def update_ranks(self):
         for i, entry in enumerate(self.top_features_ids):
             for rank, feature_id in enumerate(entry):
-                self.features[feature_id].set_rank(rank, i)
+                self.data_series[feature_id].set_rank(rank, i)
