@@ -1,8 +1,5 @@
-venv/
-__pycache__/
+venv
+__pycache__
 
-# Where animations are produced
-out/
-
-# Testing
-sandbox.py
+# Output folder for videos
+out
