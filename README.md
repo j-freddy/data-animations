@@ -67,6 +67,13 @@ It is not necessary if you only want to use the program.
 [black-formatter]: https://black.readthedocs.io/en/stable/
 [black-formatter-vscode]: https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
+### Glossary
+
+| Term           | Description                                                 |
+|----------------|------------------------------------------------------------ |
+| Series         | An individual entity or element being tracked over time (e.g. a specific city within the dataset of city populations). |
+| Timestamp      | A specific point in time at which measurements or observations are recorded for all series in the dataset (e.g. a particular date when population figures were collected). |
+
 ## Credits
 
 TODO

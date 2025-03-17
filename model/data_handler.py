@@ -6,9 +6,7 @@ from model.const import BAR_WIDTH_LERP_KERNEL_SIZE, DIR_IN
 from model.feature import Feature
 from model.lerp import Lerp
 
-# In general:
-# - feature = user
-# - entry = day
+
 class DataHandler:
     def __init__(self, filename, num_visible=10):
         self.data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
@@ -40,7 +38,7 @@ class DataHandler:
         self.units_indices = self.get_units_indices()
 
         self.update_ranks()
-    
+
     def num_entries(self):
         return self.get_features().shape[0]
 
@@ -56,17 +54,22 @@ class DataHandler:
             lambda entry: entry.nlargest(self.num_visible).index.to_numpy(),
             axis=1,
         )
-    
+
     def get_max(self):
         return self.get_features().max().max()
-    
+
     def get_maxes(self):
         return self.get_features().max(axis=1)
 
     def get_max_bar_width(self, entry_index: float):
         # TODO Magic numbers
         # 1.15 ensures bar never goes off-screen
-        return Lerp.weighted_avg(self.maxes, entry_index, kernel_size=BAR_WIDTH_LERP_KERNEL_SIZE) * 1.15
+        return (
+            Lerp.weighted_avg(
+                self.maxes, entry_index, kernel_size=BAR_WIDTH_LERP_KERNEL_SIZE
+            )
+            * 1.15
+        )
 
     def get_units_indices(self):
         units_indices = np.empty(self.num_entries())
@@ -78,10 +81,11 @@ class DataHandler:
             min_ticks = 3
             # Choose largest unit that is not too large (i.e. shows at least
             # @min_ticks ticks)
-            units_indices[i] = np.where((self.available_units * min_ticks) > max_bar_width)[0][0] - 1
-        
+            units_indices[i] = (
+                np.where((self.available_units * min_ticks) > max_bar_width)[0][0] - 1
+            )
+
         return units_indices
-            
 
     def update_ranks(self):
         for i, entry in enumerate(self.top_features_ids):
