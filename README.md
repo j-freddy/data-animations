@@ -9,11 +9,13 @@ Transform your data into smooth video animations.
 ## Table of Contents
 
 - [Usage Guide](#usage-guide)
-  - [Quick Start](#quick-start)
-  - [Configuration](#configuration)
-  - [Custom Data](#custom-data)
-  - [Examples](#examples)
+    - [Quick Start](#quick-start)
+    - [Configuration](#configuration)
+    - [Custom Data](#custom-data)
+    - [Examples](#examples)
 - [Development Guide](#development-guide)
+    - [Installation](#installation)
+- [Glossary](#glossary)
 - [Credits](#credits)
 
 ## Usage Guide
@@ -140,7 +142,7 @@ It is not necessary if you only want to use the program.
 [black-formatter]: https://black.readthedocs.io/en/stable/
 [black-formatter-vscode]: https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
-### Glossary
+## Glossary
 
 | Term           | Description                                                 |
 |----------------|------------------------------------------------------------ |
