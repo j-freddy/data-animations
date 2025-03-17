@@ -3,6 +3,6 @@ FILE_IN_DEFAULT = "example"
 DIR_OUT = "out"
 FILE_OUT_DEFAULT = "video"
 
-TITLE_DEFAULT = "IQs over time"
+TITLE_DEFAULT = "My Data Animation"
 NUM_VISIBLE_DEFAULT = 10
 BAR_WIDTH_LERP_KERNEL_SIZE = 29
