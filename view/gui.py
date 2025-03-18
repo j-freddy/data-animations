@@ -34,6 +34,7 @@ class GUI:
         self.window = pyglet.window.Window(self.w(), self.h())
 
         padding = 16 * self.scale
+
         self.plot = BarPlot(
             data_handler,
             x=padding,

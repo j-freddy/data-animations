@@ -21,10 +21,10 @@ class DataSeries:
 
     id: str
     values: pd.Series
-    num_visible: int = 10
+    _num_visible: int = 10
 
     def __post_init__(self) -> None:
-        self.ranks = np.ones_like(self.values) * (self.num_visible + 1)
+        self.ranks = np.ones_like(self.values) * (self._num_visible + 1)
 
     def set_rank(self, rank: int, i: int) -> None:
         self.ranks[i] = rank

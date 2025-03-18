@@ -48,11 +48,11 @@ class DataHandler:
             num_visible (int, optional): Maximum number of bars to display in
                 the visualization. Default: 10.
         """
-        self.data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
+        self._data = pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))
         # Drop rows where all elements are NaN (e.g. empty lines at end of file)
-        self.data = self.data.dropna(how="all")
+        self._data = self._data.dropna(how="all")
 
-        self.num_visible = num_visible
+        self._num_visible = num_visible
 
         self.data_series = {
             name: DataSeries(name, series.values, num_visible)
@@ -71,10 +71,10 @@ class DataHandler:
         # Perform calculations
 
         # Ids of series that are visible per timestamp
-        self.top_series_ids = self._get_top_series_ids()
+        self._top_series_ids = self._get_top_series_ids()
 
         # Max series value per timestamp
-        self.maxes = self._get_maxes()
+        self._maxes = self._get_maxes()
 
         # Unit choice per timestamp
         # Usage: self.available_units[self.units_indices[timestamp_index]]
@@ -86,7 +86,7 @@ class DataHandler:
         """
         Get the raw data without the timestamp column.
         """
-        return self.data.iloc[:, 1:]
+        return self._data.iloc[:, 1:]
 
     def _get_max(self) -> float:
         """
@@ -102,7 +102,7 @@ class DataHandler:
 
     def _get_top_series_ids(self) -> pd.Series:
         return self._get_series().apply(
-            lambda timestamp: timestamp.nlargest(self.num_visible).index.to_numpy(),
+            lambda timestamp: timestamp.nlargest(self._num_visible).index.to_numpy(),
             axis=1,
         )
 
@@ -136,7 +136,7 @@ class DataHandler:
         """
         Get the timestamp of the i-th entry.
         """
-        return self.data.values[i, 0]
+        return self._data.values[i, 0]
 
     def calculate_max_bar_width_value(self, timestamp_index: float) -> float:
         """
@@ -158,7 +158,7 @@ class DataHandler:
         """
         return (
             Lerp.weighted_avg(
-                self.maxes, timestamp_index, kernel_size=BAR_WIDTH_LERP_KERNEL_SIZE
+                self._maxes, timestamp_index, kernel_size=BAR_WIDTH_LERP_KERNEL_SIZE
             )
             * 1.15
         )
@@ -170,6 +170,6 @@ class DataHandler:
         The update is done lazily. At each timestamp, only the top visible
         series are updated.
         """
-        for i, series_ids in enumerate(self.top_series_ids):
+        for i, series_ids in enumerate(self._top_series_ids):
             for rank, series_id in enumerate(series_ids):
                 self.data_series[series_id].set_rank(rank, i)
