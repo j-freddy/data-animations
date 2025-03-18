@@ -1,136 +1,173 @@
 # Data Animations
 
-![Preview](preview.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Using [pyglet][3] as a multimedia library.
+Transform time series data into smooth video animations.
 
-## Quick Start
+https://github.com/user-attachments/assets/20ff992f-4993-488b-b281-f395e575b493
 
-```bash
-# Create virtual environment
-$ python -m venv venv
-# Activate for Linux, OS X users
-$ source venv/bin/activate
-# Activate for Windows users
-$ source venv/Scripts/activate
-# Check Python 3.10.8 is used. Some scripts may fail on Python 3.11
-$ python
-Python 3.10.8
->>> exit()
-# Install requirements
-$ pip install -r requirements.txt
-```
+## Table of Contents
 
-After setting up the environment, let's try a test run. This animation is ~30
-seconds.
-```bash
-$ python main.py
-```
-
-Cool! Now, let's try to save this animation as a video. Run the following
-command. You may find the window is too large to fit on your screen (depending
-on your display size), but that's OK! Simply wait until it finishes running.
-**You can also let it run in the background.** (You can even drag the window and
-it will not affect the final video.) Alternatively, you can close the window
-before the animation finishes, but only part of the animation gets saved.
-```bash
-$ python main.py -prod
-```
-
-You can find the saved video under `out/video.mp4`.
+- [Usage Guide](#usage-guide)
+    - [Quick Start](#quick-start)
+    - [Configuration](#configuration)
+    - [Custom Data](#custom-data)
+    - [Examples](#examples)
+- [Development Guide](#development-guide)
+    - [Installation](#installation)
+- [Glossary](#glossary)
+- [Credits](#credits)
 
 ## Usage Guide
 
-See [Quick Start](#quick-start) to set up the environment.
+### Quick Start
 
-Run the following command for a description of usage options. We also provide a
-example below. To use your own dataset, place the file under `data/`, then
-specify the file with `-data` flag. Only `.csv` files are supported. **The
-program assumes the 1st column specifies the progress or timeline (e.g. date).**
-```bash
-$ python main.py -h
-usage: main.py [-h] [-data DATA] [-title TITLE] [-fpe FPE] [-visible VISIBLE] [-prod] [-out OUT]
+1. Clone this repository.
 
-options:
-  -h, --help        show this help message and exit
-  -data DATA        Input data filename (without extension). Must be .csv and reside in data/. (default: example)
-  -title TITLE      Title displayed in video. (default: IQs over time)
-  -fpe FPE          Frames per entry. A larger value results in slower animation. (default: 2.5)
-  -visible VISIBLE  Number of top visible features. (default: 10)
-  -prod             If True, enter production mode to record and save animation as .mp4 file. (default: False)
-  -out OUT          If in production mode, specifies output filename (without extension). (default: video)
+```sh
+git clone git@github.com:j-freddy/data-animations.git
 ```
 
-### Example
+2. Create virtual environment with Python 3.9+.
+
+```sh
+# Go inside repo
+cd lorem-ipsum
+# Check Python 3.10+ is used
+python --version
+# Create virtual environment
+python -m venv venv
+# Activate virtual environment
+source venv/bin/activate
+```
+
+3. Install dependencies.
+
+```sh
+pip install -r requirements.txt
+```
+
+To check everything has been set up correctly, let's try a test run. This
+animation is ~30 seconds.
+```sh
+python -m main -title "IQs over time"
+```
+
+Cool! Now, let's try to save this animation as a video. Run the following
+command.
+
+> [!NOTE]
+> You may find the window is too large to fit on your screen (depending on your
+> display size). That is OK. Simply wait until it finishes running. You can
+> also let it run in the background. You can even drag the window and it will
+> not affect the final video. Alternatively, you can close the window before
+> the animation finishes, but only part of the animation gets saved.
+```sh
+python -m main -title "IQs over time" -prod
+```
+
+### Configuration
+
+See [Quick Start](#quick-start) to get started.
+
+Run the following command for a description of usage options.
+[Examples](#examples) are also provided below.
+
+```sh
+python -m main -h
+```
+```sh
+usage: main.py [-h] [-data DATA] [-title TITLE] [-fpe FPE] [-visible VISIBLE] [-prod] [-out OUT]
+
+optional arguments:
+  -h, --help        show this help message and exit
+  -data DATA        Input data filename (without extension). Must be .csv and reside in data/. Default: example
+  -title TITLE      Title displayed in video. (default: My Data Animation)
+  -fpe FPE          Frames per timestamp. A larger value results in slower animation. Default: 2.5
+  -visible VISIBLE  Number of top visible series. Default: 10
+  -prod             If True, enter production mode to record and save animation as .mp4 file. Default: False (default:
+                    False)
+  -out OUT          If in production mode, specifies output filename (without extension). Default: video
+```
+
+### Custom Data
+
+This section explains how to pass in a custom CSV file and have it animated.
+
+Firstly, the CSV data must respect the following criteria.
+1. The first column must contain evenly spaced timestamps. Otherwise, the
+    animation will speed up and slow down according to the spacing.
+2. The first row must contain series names.
+3. The remaining cells, apart from the timestamps, must be numerical.
+
+For an example, see `data/example.csv`. You are responsible for providing your
+own ETL pipeline to produce a CSV file that meets these criteria.
+
+Place the CSV file in the `data` directory.
+
+Then, run the following command. You may need to adjust the `fpe`. A larger
+value results in a slower animation.
+```sh
+python -m main -data <filename-without-extension> -title <any-title> -fpe <fpe>
+```
+
+### Examples
 
 Let's use the example data, but make the animation really fast! Let's also show
 more data.
-```bash
-$ python main.py -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14
+
+```sh
+python -m main -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14
 ```
 
 Cool! Now, let's render the video and save it. (You can let the video run in the
 background.)
-```bash
-$ python main.py -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14 -prod -out speedyvid
+
+```sh
+python -m main -data example -title "Fast Animation: IQs over time" -fpe 0.5 -visible 14 -prod -out speedyvid
 ```
 
-### Advanced Settings
+## Development Guide
 
-This project decouples the GUI (view) from the logic (model). Some settings are
-set as constants in `model/const.py` and `view/const.py`. You can customise
-these settings as follows. Note the `DEFAULT` constants are not necessary to
-change, as they can be changed through the command line interface.
+Read this section if you want to make changes or contribute to this repository.
+It is not necessary if you only want to use the program.
 
-```py
-# model/const.py
-DIR_IN       # The program searches this directory for the dataset
-DIR_OUT      # Videos are output in this directory
+### Installation
 
-# view/const.py
-FPS         # Frames per second of video
-WINDOW_W    # Window width
-WINDOW_H    # Window height
-```
+1. Go through [Quick Start](#quick-start) in the Usage Guide.
+2. Install the [Black Formatter][black-formatter]. For example, use the [Black
+   Formatter Extension][black-formatter-vscode] for Visual Studio Code. The
+   settings in `.vscode/` configures Black to auto-format your code on save.
 
-A lot of the layout and visuals (e.g. bar width, margins, font size) are
-hardcoded in files within `view/`, most notably within `view/gui.py`. You can
-update the visuals to your preferences by modifying the code there.
+[black-formatter]: https://black.readthedocs.io/en/stable/
+[black-formatter-vscode]: https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
-### Very advanced settings
+### Project Structure
 
-If your custom dataset does not meet the requirements, I recommend preprocessing
-it.
+This project decouples the GUI (view) from the logic (model).
 
-Since this project decouples the GUI and logic, you only need to modify the code
-in `model/data_handler.py` to preprocess your custom dataset.
+- `main.py` - Entry point for the program.
+- `model/` - Contains the logic for the program. The main file is
+  `model/data_handler.py`, which performs calculations to prepare the data for
+  animation.
+- `view/` - Contains GUI-related code. The main entry point is `view/gui.py`,
+  which uses [pyglet][pyglet-docs] as a multimedia library for rendering
+  visuals.
+- `data/` - All CSV raw data files are stored here.
+- `out/` - All output video animation files are saved here.
 
-I recommend creating a method `preprocess_data` in `DataHandler` and calling it
-in the constructor immediately after `self.data =
-pd.read_csv(os.path.join(DIR_IN, f"{filename}.csv"))`. This method should be
-written to modify `self.data` to meet the requirements.
+[pyglet-docs]: https://pyglet.readthedocs.io/en/latest/
 
-For an example, see `project-largest-cities` branch.
+## Glossary
+
+| Term           | Description                                                 |
+|----------------|------------------------------------------------------------ |
+| Series         | An individual entity or element being tracked over time (e.g. a specific city within the dataset of city populations). |
+| Timestamp      | A specific point in time at which measurements or observations are recorded for all series in the dataset (e.g. a particular date when population figures were collected). |
 
 ## Credits
 
-Inspired by @carykh's drawer written in Processing ([repo][1] and
-[tutorial][2]). If you are a beginner, I fully recommend his tutorial as it is
-simple and easy to follow. That said, I have extended many features and made
-numerous improvements in optimisation and code hygiene.
+Inspired by @carykh's [data animations program][carykh-drawer] written in
+Processing. `data/example.csv` is also from his repository.
 
-@carykh also has a YouTube channel @ [Abacaba][4] with many data visualisation
-videos.
-
-[1]: https://github.com/carykh/AbacabaTutorialDrawer
-[2]: https://www.youtube.com/playlist?list=PLsRQr3mpFF3Khoca0cXA8-_tSloCwlZK8
-[3]: https://pyglet.readthedocs.io/en/latest/
-[4]: https://www.youtube.com/@Abacaba
-
-## Contribute
-
-### Update Requirements
-
-```bash
-$ pip freeze > requirements.txt
-```
+[carykh-drawer]: https://github.com/carykh/AbacabaTutorialDrawer

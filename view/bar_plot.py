@@ -8,8 +8,15 @@ from model.lerp import Lerp
 from model.utils import Utils
 from view.const import RANK_LERP_KERNEL_SIZE
 
+
 class BarPlot:
-    def __init__(self, data_handler: DataHandler, x, y, width, height, num_visible=10, prod=False):
+    """
+    noqa
+    """
+
+    def __init__(
+        self, data_handler: DataHandler, x, y, width, height, num_visible=10, prod=False
+    ):
         self.x = x
         self.y = y
         self.width = width
@@ -24,7 +31,7 @@ class BarPlot:
         self.bar_height = 0.75 * self.height / self.num_visible
 
         # Cache order of data features
-        self.data_features = data_handler.features.values()
+        self.data_features = data_handler.data_series.values()
 
         self.batch_tick = pyglet.graphics.Batch()
         self.batch = pyglet.graphics.Batch()
@@ -42,7 +49,10 @@ class BarPlot:
 
         for feature in self.data_features:
             bar = shapes.Rectangle(
-                0, 0, 0, 0,
+                0,
+                0,
+                0,
+                0,
                 color=Utils.get_random_color(presentation=True),
                 batch=self.batch,
             )
@@ -58,10 +68,12 @@ class BarPlot:
 
             self.sprites_bars.append(bar)
             self.sprites_labels.append(label)
-    
+
     def update_bars(self, entry_index: float, max_value):
         for i, feature in enumerate(self.data_features):
-            rank = Lerp.weighted_avg(feature.ranks, entry_index, kernel_size=RANK_LERP_KERNEL_SIZE)
+            rank = Lerp.weighted_avg(
+                feature.ranks, entry_index, kernel_size=RANK_LERP_KERNEL_SIZE
+            )
 
             # Do not update bars if they are not visible
             if np.linalg.norm(self.num_visible + 1 - rank < 1e-3):
@@ -82,12 +94,9 @@ class BarPlot:
             y_padding = 4 * self.scale
 
             label = self.sprites_labels[i]
-            label.x = max(
-                x - x_padding,
-                self.x + label.content_width + x_padding
-            )
+            label.x = max(x - x_padding, self.x + label.content_width + x_padding)
             label.y = y + y_padding
-    
+
     def update_ticks(self, data_handler: DataHandler, entry_index: float, max_value):
         # Pyglet needs the sprites but Python garbage collects local variables
         # so this acts as a temporary buffer
@@ -112,7 +121,10 @@ class BarPlot:
                 x = self.value_to_x(value, max_value)
 
                 tick = shapes.Rectangle(
-                    x - width, self.y, width, self.height,
+                    x - width,
+                    self.y,
+                    width,
+                    self.height,
                     color=color,
                     batch=self.batch_tick,
                 )
@@ -130,13 +142,13 @@ class BarPlot:
 
                 self.sprites_ticks.append(tick)
                 self.sprites_ticks.append(label)
-        
+
         # TODO Make util function or just clean up
         update_tick_at_unit(curr, 255 - rem * 255)
         update_tick_at_unit(next, rem * 255)
 
     def draw(self, data_handler: DataHandler, entry_index: float):
-        max_value = data_handler.get_max_bar_width(entry_index)
+        max_value = data_handler.calculate_max_bar_width_value(entry_index)
 
         self.update_ticks(data_handler, entry_index, max_value)
         self.update_bars(entry_index, max_value)
