@@ -4,6 +4,8 @@
 
 Transform time series data into smooth video animations.
 
+https://github.com/user-attachments/assets/20ff992f-4993-488b-b281-f395e575b493
+
 ## Table of Contents
 
 - [Usage Guide](#usage-guide)
