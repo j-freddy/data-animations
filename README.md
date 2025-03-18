@@ -1,6 +1,6 @@
 # Data Animations
 
-**Insert badges here**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Transform time series data into smooth video animations.
 
@@ -28,7 +28,7 @@ Transform time series data into smooth video animations.
 git clone git@github.com:j-freddy/data-animations.git
 ```
 
-2. Create virtual environment with Python 3.10+.
+2. Create virtual environment with Python 3.9+.
 
 ```sh
 # Go inside repo
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 To check everything has been set up correctly, let's try a test run. This
 animation is ~30 seconds.
 ```sh
-python -m main
+python -m main -title "IQs over time"
 ```
 
 Cool! Now, let's try to save this animation as a video. Run the following
@@ -63,7 +63,7 @@ command.
 > not affect the final video. Alternatively, you can close the window before
 > the animation finishes, but only part of the animation gets saved.
 ```sh
-python -m main -prod
+python -m main -title "IQs over time" -prod
 ```
 
 ### Configuration
@@ -82,7 +82,7 @@ usage: main.py [-h] [-data DATA] [-title TITLE] [-fpe FPE] [-visible VISIBLE] [-
 optional arguments:
   -h, --help        show this help message and exit
   -data DATA        Input data filename (without extension). Must be .csv and reside in data/. Default: example
-  -title TITLE      Title displayed in video. (default: IQs over time)
+  -title TITLE      Title displayed in video. (default: My Data Animation)
   -fpe FPE          Frames per timestamp. A larger value results in slower animation. Default: 2.5
   -visible VISIBLE  Number of top visible series. Default: 10
   -prod             If True, enter production mode to record and save animation as .mp4 file. Default: False (default:
@@ -167,6 +167,7 @@ This project decouples the GUI (view) from the logic (model).
 
 ## Credits
 
-Inspired by @carykh's [data animations program][carykh-drawer] written in Processing.
+Inspired by @carykh's [data animations program][carykh-drawer] written in
+Processing. `data/example.csv` is also from his repository.
 
 [carykh-drawer]: https://github.com/carykh/AbacabaTutorialDrawer
