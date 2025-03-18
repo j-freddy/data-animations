@@ -15,6 +15,10 @@ from view.const import (
 
 
 class GUI:
+    """
+    noqa
+    """
+
     def __init__(
         self,
         data_handler,

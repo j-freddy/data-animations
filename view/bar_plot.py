@@ -10,6 +10,10 @@ from view.const import RANK_LERP_KERNEL_SIZE
 
 
 class BarPlot:
+    """
+    noqa
+    """
+
     def __init__(
         self, data_handler: DataHandler, x, y, width, height, num_visible=10, prod=False
     ):
