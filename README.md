@@ -2,7 +2,7 @@
 
 **Insert badges here**
 
-Transform your data into smooth video animations.
+Transform time series data into smooth video animations.
 
 **Insert preview image here**
 
@@ -136,11 +136,27 @@ It is not necessary if you only want to use the program.
 
 1. Go through [Quick Start](#quick-start) in the Usage Guide.
 2. Install the [Black Formatter][black-formatter]. For example, use the [Black
-   Formatter Extension][black-formatter-vscode] for Visual Studio Code. It will
-   auto-format your code on save.
+   Formatter Extension][black-formatter-vscode] for Visual Studio Code. The
+   settings in `.vscode/` configures Black to auto-format your code on save.
 
 [black-formatter]: https://black.readthedocs.io/en/stable/
 [black-formatter-vscode]: https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+
+### Project Structure
+
+This project decouples the GUI (view) from the logic (model).
+
+- `main.py` - Entry point for the program.
+- `model/` - Contains the logic for the program. The main file is
+  `model/data_handler.py`, which performs calculations to prepare the data for
+  animation.
+- `view/` - Contains GUI-related code. The main entry point is `view/gui.py`,
+  which uses [pyglet][pyglet-docs] as a multimedia library for rendering
+  visuals.
+- `data/` - All CSV raw data files are stored here.
+- `out/` - All output video animation files are saved here.
+
+[pyglet-docs]: https://pyglet.readthedocs.io/en/latest/
 
 ## Glossary
 
